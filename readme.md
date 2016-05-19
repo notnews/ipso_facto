@@ -1,8 +1,6 @@
----
-title: "Analysis of IPSO Complaints"
-author: "Gaurav Sood"
-date: "5/18/2016"
----
+## Analysis of IPSO Complaints
+**Gaurav Sood**
+**5/18/2016**
 
 [Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. 
 
