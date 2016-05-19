@@ -90,7 +90,7 @@ theme(axis.text.y=element_text(size=7, color="#636363")) +
 theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-#ggsave("ipso_n_complaints.pdf")
+#ggsave("figs/ipso_n_complaints.pdf")
 ```
 
 To download pdf version of the graph, [click here](figs/ipso_n_complaints.pdf).
@@ -118,7 +118,7 @@ theme(axis.text.y=element_text(size=7, color="#636363")) +
 theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-#ggsave("ipso_n_upheld.pdf")
+#ggsave("figs/ipso_n_upheld.pdf")
 ```
 To download pdf version of the graph, [click here](figs/ipso_n_upheld.pdf).
 
@@ -146,6 +146,6 @@ theme(axis.text.y=element_text(size=7, color="#636363")) +
 theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-#ggsave("ipso_p_upheld.pdf")
+#ggsave("figs/ipso_p_upheld.pdf")
 ```
 To download pdf version of the graph, [click here](figs/ipso_p_upheld.pdf).
