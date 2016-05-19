@@ -62,10 +62,10 @@ media_tab <- table(tab$media_org)
 media_tab2 <- setNames(data.frame(media_tab[order(-media_tab)][1:20]), c("Media", "Frequency"))
 media_tab2$Media <- factor(media_tab2$Media, levels=media_tab2$Media[order(media_tab2$Frequency)], ordered=TRUE) #reordering
 
-# write.csv("media_tab2", file="ipso_complaints.csv", row.names=F)
+# write.csv("media_tab2", file="data/ipso_complaints.csv", row.names=F)
 ```
 
-To download the data, [click here](ipso_complaints.csv).
+To download the data, [click here](data/ipso_complaints.csv).
 
 ### Total Complaints Received
 
