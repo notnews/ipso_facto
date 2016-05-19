@@ -1,16 +1,19 @@
-"
-Analyze IPSO complaints
-Author: Gaurav Sood
-Date: 5/18/2016
+---
+title: "Analysis of IPSO Complaints"
+author: "Gaurav Sood"
+date: "5/18/2016"
+---
 
-"
+[Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. 
 
-# set dir
 
 ```r
+# set dir
 setwd(githubdir)
 setwd("ipso_facto/")
 ```
+
+### Scrape IPSO 
 
 
 ```r
@@ -24,6 +27,9 @@ tabs <-
   html_nodes("table") %>%
   html_table(header=T)
 ```
+
+### Clean the data
+
 
 ```r
 tab <- tabs[[1]]
@@ -48,7 +54,11 @@ tab$media_org[grepl("daily express$|express.co.uk|sunday express$", tab$media_or
 # Appeal held/in part
 tab$Upheld[grepl("was not upheld", tab$Conclusions)] <- 0
 tab$Upheld[grepl("was upheld", tab$Conclusions)] <- 1
+```
 
+### Calculate Basic Stats
+
+```r
 # Batting average
 library(plyr)
 upheld_tab <- ddply(tab, ~media_org, summarise, total_complaints=length(media_org), total_upheld = sum(Upheld))
@@ -60,10 +70,12 @@ media_tab <- table(tab$media_org)
 media_tab2 <- setNames(data.frame(media_tab[order(-media_tab)][1:20]), c("Media", "Frequency"))
 media_tab2$Media <- factor(media_tab2$Media, levels=media_tab2$Media[order(media_tab2$Frequency)], ordered=TRUE) #reordering
 
-write.csv("media_tab2", file="ipso_complaints.csv", row.names=F)
+# write.csv("media_tab2", file="ipso_complaints.csv", row.names=F)
 ```
 
-# Total Complaints
+To download the data, [click here](ipso_complaints.csv).
+
+### Total Complaints Received
 
 
 ```r
@@ -95,7 +107,10 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("ipso_n_complaints.pdf")
 ```
 
-# Total Complaints upheld
+To download pdf version of the graph, [click here](figs/ipso_n_complaints.pdf).
+
+
+### Total Complaints Upheld 
 
 
 ```r
@@ -125,6 +140,9 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ```r
 #ggsave("ipso_n_upheld.pdf")
 ```
+To download pdf version of the graph, [click here](figs/ipso_n_upheld.pdf).
+
+### Batting Average of Media Organizations with most complaints against them
 
 
 ```r
@@ -154,9 +172,6 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk batting_av](figure/batting_av-1.png)
 
 ```r
-ggsave("ipso_p_upheld.pdf")
+#ggsave("ipso_p_upheld.pdf")
 ```
-
-```
-## Saving 7 x 7 in image
-```
+To download pdf version of the graph, [click here](figs/ipso_p_upheld.pdf).
