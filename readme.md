@@ -1,6 +1,4 @@
 ## Analysis of IPSO Complaints
-**Gaurav Sood**
-**5/18/2016**
 
 [Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. 
 
@@ -68,10 +66,10 @@ media_tab <- table(tab$media_org)
 media_tab2 <- setNames(data.frame(media_tab[order(-media_tab)][1:20]), c("Media", "Frequency"))
 media_tab2$Media <- factor(media_tab2$Media, levels=media_tab2$Media[order(media_tab2$Frequency)], ordered=TRUE) #reordering
 
-# write.csv("media_tab2", file="ipso_complaints.csv", row.names=F)
+# write.csv("media_tab2", file="data/ipso_complaints.csv", row.names=F)
 ```
 
-To download the data, [click here](ipso_complaints.csv).
+To download the data, [click here](data/ipso_complaints.csv).
 
 ### Total Complaints Received
 
@@ -102,7 +100,7 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk total_complaints](figure/total_complaints-1.png)
 
 ```r
-#ggsave("ipso_n_complaints.pdf")
+#ggsave("figs/ipso_n_complaints.pdf")
 ```
 
 To download pdf version of the graph, [click here](figs/ipso_n_complaints.pdf).
@@ -136,7 +134,7 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk total_upheld](figure/total_upheld-1.png)
 
 ```r
-#ggsave("ipso_n_upheld.pdf")
+#ggsave("figs/ipso_n_upheld.pdf")
 ```
 To download pdf version of the graph, [click here](figs/ipso_n_upheld.pdf).
 
@@ -170,6 +168,6 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk batting_av](figure/batting_av-1.png)
 
 ```r
-#ggsave("ipso_p_upheld.pdf")
+#ggsave("figs/ipso_p_upheld.pdf")
 ```
 To download pdf version of the graph, [click here](figs/ipso_p_upheld.pdf).
