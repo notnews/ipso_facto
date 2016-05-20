@@ -8,11 +8,13 @@ IPSO has received 371 complaints as of May 20th, 2016. Of the 371 complaints, [T
 
 However, generally less than half the number of complaints were completely or partly upheld. Topping the list was [The Express](http://www.express.co.uk/) and [The Telegraph](http://www.telegraph.co.uk/) with 10 upheld complaints each. And following close behind was [The Times](http://www.thetimes.co.uk/) with 8 complaints, [The Mail](http://www.dailymail.co.uk/) with 6, and the [The Sun](http://www.thesun.co.uk/sol/homepage/) and the Daily Star with 4 each. 
 
-![plot of chunk total_upheld](figs/total_upheld-1.png)
+<img src="figs/total_upheld-1.png" width="300">
 
 See also [plot (png)](figure/batting_av-1.png) of batting average of media organizations with most complaints against them.
 
-*Table of Contents:*
+---------------
+
+**Table of Contents:**
 
 * [Data](data/ipso_complaints.csv)  
 * [Script](ipso_facto.R)  
