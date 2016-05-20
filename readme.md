@@ -1,6 +1,10 @@
 ## Analysis of IPSO Complaints
 
-[Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. 
+[Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. In total, IPSO has received 371 complaints as of May 20th. [The Telegraph](), [The Times](), [The Mirror](), [The Express](), [The Sun][], [The Mail]
+
+* [Total Complaints (pdf)](figure/ipso_n_complaints.pdf)
+* [Total Complains Upheld (pdf)](figure/ipso_n_upheld.pdf.pdf)
+* [Proportion of Complains Upheld for Media Organizations with Most Complaints (pdf)](figure/ipso_p_upheld.pdf.pdf)
 
 
 ```r
@@ -15,7 +19,14 @@ setwd("ipso_facto/")
 ```r
 # Scrape IPSO
 library(rvest)
+```
 
+```
+## Loading required package: xml2
+```
+
+```r
+library(stringi)
 ipso <- read_html("https://www.ipso.co.uk/IPSO/rulings/IPSOrulings.html")
 
 tabs <- 
@@ -43,13 +54,14 @@ tab$media_org[grepl("daily star|dailystar", tab$media_org)] <- "daily star"
 tab$media_org[grepl("the sun |the sun$", tab$media_org)] <- "the sun"
 tab$media_org[grepl("the daily telegraph|the sunday telegraph|telegraph.co.uk", tab$media_org)] <- "the telegraph"
 tab$media_org[grepl("the times$|the sunday times$", tab$media_org)] <- "the times"
-tab$media_org[grepl("$daily mail$|the mail on sunday|mail online|mail online|sunday mail", tab$media_org)] <- "the mail"
+tab$media_org[grepl("daily mail$|the mail on sunday|mail online|mail online|sunday mail|the mail$", tab$media_org)] <- "the mail"
 tab$media_org[grepl("daily mirror$|mirror.co.uk|sunday mirror$", tab$media_org)] <- "the mirror"
 tab$media_org[grepl("daily express$|express.co.uk|sunday express$", tab$media_org)] <- "the express"
 
 # Appeal held/in part
 tab$Upheld[grepl("was not upheld", tab$Conclusions)] <- 0
 tab$Upheld[grepl("was upheld", tab$Conclusions)] <- 1
+# write.csv(tab, file="data/ipso_complaints.csv", row.names=F)
 ```
 
 ### Calculate Basic Stats
@@ -65,8 +77,6 @@ upheld_tab <- subset(upheld_tab, !is.na(prop_upheld))
 media_tab <- table(tab$media_org)
 media_tab2 <- setNames(data.frame(media_tab[order(-media_tab)][1:20]), c("Media", "Frequency"))
 media_tab2$Media <- factor(media_tab2$Media, levels=media_tab2$Media[order(media_tab2$Frequency)], ordered=TRUE) #reordering
-
-# write.csv("media_tab2", file="data/ipso_complaints.csv", row.names=F)
 ```
 
 To download the data, [click here](data/ipso_complaints.csv).
@@ -100,10 +110,10 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk total_complaints](figure/total_complaints-1.png)
 
 ```r
-#ggsave("figs/ipso_n_complaints.pdf")
+#ggsave("figure/ipso_n_complaints.pdf")
 ```
 
-To download pdf version of the graph, [click here](figs/ipso_n_complaints.pdf).
+To download the pdf version of the graph, [click here](figure/ipso_n_complaints.pdf).
 
 
 ### Total Complaints Upheld 
@@ -134,9 +144,9 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk total_upheld](figure/total_upheld-1.png)
 
 ```r
-#ggsave("figs/ipso_n_upheld.pdf")
+#ggsave("figure/ipso_n_upheld.pdf")
 ```
-To download pdf version of the graph, [click here](figs/ipso_n_upheld.pdf).
+To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf).
 
 ### Batting Average of Media Organizations with most complaints against them
 
@@ -168,6 +178,6 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ![plot of chunk batting_av](figure/batting_av-1.png)
 
 ```r
-#ggsave("figs/ipso_p_upheld.pdf")
+#ggsave("figure/ipso_p_upheld.pdf")
 ```
-To download pdf version of the graph, [click here](figs/ipso_p_upheld.pdf).
+To download the pdf version of the graph, [click here](figure/ipso_p_upheld.pdf).
