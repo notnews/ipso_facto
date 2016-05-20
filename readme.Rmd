@@ -76,7 +76,7 @@ To download the data, [click here](data/ipso_complaints.csv).
 
 ### Total Complaints Received
 
-```{r, fig.width=6.5, fig.height=10, total_complaints}
+```{r, fig.width=6.5, fig.height=9, total_complaints}
 # The plot
 library(ggplot2)
 library(scales)
@@ -92,10 +92,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=8, color="#636363")) +
-theme(axis.text.y=element_text(size=8, color="#636363")) +
-theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=9, color="#636363")) +
+theme(axis.text.y=element_text(size=9, color="#636363")) +
+theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_n_complaints.pdf")
 ```
@@ -105,7 +105,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_complaints.
 
 ### Total Complaints Upheld 
 
-```{r, fig.width=6.5, total_upheld}
+```{r, fig.width=6.5, fig.height=9, total_upheld}
 n_upheld <- setNames(upheld_tab[order(-upheld_tab$total_upheld)[1:20],c("media_org", "total_upheld")], c("Media", "Frequency"))
 n_upheld$Media <- factor(n_upheld$Media, levels=n_upheld$Media[order(n_upheld$Frequency)], ordered=TRUE) #reordering
 
@@ -120,10 +120,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=8, color="#636363")) +
-theme(axis.text.y=element_text(size=8, color="#636363")) +
-theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=9, color="#636363")) +
+theme(axis.text.y=element_text(size=9, color="#636363")) +
+theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_n_upheld.pdf")
 ```
@@ -131,7 +131,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf)
 
 ### Batting Average of Media Organizations with most complaints against them
 
-```{r, fig.width=6.5, batting_av}
+```{r, fig.width=6.5, fig.height=9, batting_av}
 # Batting average of the top 20
 
 p_upheld    <-  setNames(upheld_tab[upheld_tab$media_org %in% media_tab2$Media, c("media_org", "prop_upheld")], c("Media", "Proportion"))
@@ -148,10 +148,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=8, color="#636363")) +
-theme(axis.text.y=element_text(size=8, color="#636363")) +
-theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=9, color="#636363")) +
+theme(axis.text.y=element_text(size=9, color="#636363")) +
+theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_p_upheld.pdf")
 ```
