@@ -156,6 +156,6 @@ theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_p_upheld.pdf")
-#ggsave("figure/total_upheld-1.png")
+#ggsave("figure/batting_av-1.png")
 ```
 To download the pdf version of the graph, [click here](figure/ipso_p_upheld.pdf).
