@@ -76,7 +76,7 @@ To download the data, [click here](data/ipso_complaints.csv).
 
 ### Total Complaints Received
 
-```{r, fig.width=6.5, total_complaints}
+```{r, fig.width=6.5, fig.height=10, total_complaints}
 # The plot
 library(ggplot2)
 library(scales)
