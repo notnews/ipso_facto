@@ -79,8 +79,8 @@ theme(axis.text.y=element_text(size=9, color="#636363")) +
 theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-ggsave("figure/ipso_n_complaints.pdf")
-ggsave("figure/total_complaints-1.png")
+ggsave("figs/ipso_n_complaints.pdf")
+ggsave("figs/total_complaints-1.png")
 
 ### Total Complaints Upheld 
 
@@ -103,8 +103,8 @@ theme(axis.text.y=element_text(size=9, color="#636363")) +
 theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-ggsave("figure/ipso_n_upheld.pdf")
-ggsave("figure/total_upheld-1.png")
+ggsave("figs/ipso_n_upheld.pdf")
+ggsave("figs/total_upheld-1.png")
 
 ### Batting Average of Media Organizations with most complaints against them
 
@@ -117,7 +117,7 @@ ggplot(p_upheld, aes(Proportion, Media)) +
 geom_point() + 
 theme_minimal(base_size=9) +
 ylab("") + 
-xlab("Proportion of Complaints Upheld for Organizations with Most Complaints") + 
+xlab("Proportion of Complaints Upheld for Organizations\n with Most Complaints") + 
 scale_x_continuous(limits=c(0, 1), breaks = c(0,.25, .5, .75, 1.0), labels = c("0",".25", ".5", ".75", "1")) + 
 theme(panel.grid.major=element_line(color="#F0F0F0",size=.25)) +
 theme(panel.grid.minor=element_blank()) +
@@ -129,5 +129,5 @@ theme(axis.text.y=element_text(size=9, color="#636363")) +
 theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
-ggsave("figure/ipso_p_upheld.pdf")
-ggsave("figure/batting_av-1.png")
+ggsave("figs/ipso_p_upheld.pdf")
+ggsave("figs/batting_av-1.png")
