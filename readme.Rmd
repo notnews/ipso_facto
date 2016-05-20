@@ -131,7 +131,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf)
 
 ### Batting Average of Media Organizations with most complaints against them
 
-```{r, out.width='5in', batting_av}
+```{r, fig.width=5, batting_av}
 # Batting average of the top 20
 
 p_upheld    <-  setNames(upheld_tab[upheld_tab$media_org %in% media_tab2$Media, c("media_org", "prop_upheld")], c("Media", "Proportion"))

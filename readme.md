@@ -170,7 +170,7 @@ theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ```
 
-<img src="figure/batting_av-1.png" title="plot of chunk batting_av" alt="plot of chunk batting_av" width="5in" />
+![plot of chunk batting_av](figure/batting_av-1.png)
 
 ```r
 #ggsave("figure/ipso_p_upheld.pdf")
