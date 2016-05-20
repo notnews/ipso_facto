@@ -95,10 +95,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=7, color="#636363")) +
-theme(axis.text.y=element_text(size=7, color="#636363")) +
-theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=8, color="#636363")) +
+theme(axis.text.y=element_text(size=8, color="#636363")) +
+theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ```
 
@@ -129,10 +129,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=7, color="#636363")) +
-theme(axis.text.y=element_text(size=7, color="#636363")) +
-theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=8, color="#636363")) +
+theme(axis.text.y=element_text(size=8, color="#636363")) +
+theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ```
 
@@ -163,10 +163,10 @@ theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
 theme(legend.position="none") +
 theme(plot.title=element_text(color="#525252", size=10, vjust=1.25)) +
-theme(axis.text.x=element_text(size=7, color="#636363")) +
-theme(axis.text.y=element_text(size=7, color="#636363")) +
-theme(axis.title.x=element_text(size=8, color="#323232", vjust=0)) +
-theme(axis.title.y=element_text(size=8, color="#323232", vjust=1.25)) +
+theme(axis.text.x=element_text(size=8, color="#636363")) +
+theme(axis.text.y=element_text(size=8, color="#636363")) +
+theme(axis.title.x=element_text(size=9, color="#323232", vjust=0)) +
+theme(axis.title.y=element_text(size=9, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 ```
 
