@@ -106,6 +106,7 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 
 ```r
 #ggsave("figure/ipso_n_complaints.pdf")
+#ggsave("figure/total_complaints-1.png")
 ```
 
 To download the pdf version of the graph, [click here](figure/ipso_n_complaints.pdf).
@@ -140,6 +141,7 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 
 ```r
 #ggsave("figure/ipso_n_upheld.pdf")
+#ggsave("figure/ipso_n_upheld.png")
 ```
 To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf).
 
@@ -174,5 +176,6 @@ theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 
 ```r
 #ggsave("figure/ipso_p_upheld.pdf")
+#ggsave("figure/total_upheld-1.png")
 ```
 To download the pdf version of the graph, [click here](figure/ipso_p_upheld.pdf).

@@ -8,7 +8,7 @@ However, generally less than half the number of complaints were completely or pa
 
 -----------------------
 
-```{r eval=F}
+```{r dir}
 # set dir
 setwd(githubdir)
 setwd("ipso_facto/")
@@ -30,7 +30,7 @@ tabs <-
 
 ### Clean the data
 
-```{r clean}
+```{r, eval=T, clean}
 tab <- tabs[[1]]
 
 tab[,1] <- gsub("Â|â€|™|“ ", "", tab[,1])
@@ -98,6 +98,7 @@ theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_n_complaints.pdf")
+#ggsave("figure/total_complaints-1.png")
 ```
 
 To download the pdf version of the graph, [click here](figure/ipso_n_complaints.pdf).
@@ -126,6 +127,7 @@ theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_n_upheld.pdf")
+#ggsave("figure/total_upheld-1.png.png")
 ```
 To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf).
 
@@ -154,5 +156,6 @@ theme(axis.title.x=element_text(size=10, color="#323232", vjust=0)) +
 theme(axis.title.y=element_text(size=10, color="#323232", vjust=1.25)) +
 theme(plot.margin = unit(c(0.35, 0.2, 0.3, 0.35), "cm"))
 #ggsave("figure/ipso_p_upheld.pdf")
+#ggsave("figure/total_upheld-1.png")
 ```
 To download the pdf version of the graph, [click here](figure/ipso_p_upheld.pdf).
