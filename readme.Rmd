@@ -134,7 +134,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf)
 ```{r batting_av}
 # Batting average of the top 20
 
-p_upheld    <-  setNames(upheld_tab[upheld_tab$media_org %in% media_tab2$Media, c("media_org", "total_upheld")], c("Media", "Proportion"))
+p_upheld    <-  setNames(upheld_tab[upheld_tab$media_org %in% media_tab2$Media, c("media_org", "prop_upheld")], c("Media", "Proportion"))
 p_upheld$Media <- factor(p_upheld$Media, levels=p_upheld$Media[order(p_upheld$Proportion)], ordered=TRUE) #reordering
 
 ggplot(p_upheld, aes(Proportion, Media)) +
