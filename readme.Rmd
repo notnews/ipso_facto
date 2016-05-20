@@ -1,10 +1,10 @@
 ## Analysis of IPSO Complaints
 
-[Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. In total, IPSO has received 371 complaints as of May 20th. [The Telegraph](), [The Times](), [The Mirror](), [The Express](), [The Sun][], [The Mail]
+[Independent Press Standards Agency (IPSO)](https://www.ipso.co.uk/IPSO/index.html) handles complaints about accuracy etc. in the media. Here, I analyze the complaints received by IPSO. 
 
-* [Total Complaints (pdf)](figure/ipso_n_complaints.pdf)
-* [Total Complains Upheld (pdf)](figure/ipso_n_upheld.pdf.pdf)
-* [Proportion of Complains Upheld for Media Organizations with Most Complaints (pdf)](figure/ipso_p_upheld.pdf.pdf)
+IPSO has received 371 complaints as of May 20th, 2016. Of the 371 complaints, [The Telegraph](http://www.telegraph.co.uk/) alone received 35 complaints, or about 9.4% of the total complaints. It was followed closely by [The Mail](http://www.dailymail.co.uk/), with 31 complaints. [The Times](http://www.thetimes.co.uk/) had 25 complaints filed against it, [The Mirror](http://www.mirror.co.uk/) and [The Express](http://www.express.co.uk/) 22 each and [The Sun](http://www.thesun.co.uk/sol/homepage/), 19 complaints. ([Plot (pdf)](figure/ipso_n_complaints.pdf) of total complaints for top 20 media organizations with most complaints against them.) 
+
+However, generally less than half the number of complaints were completely or partly upheld. Topping the list was [The Express]((http://www.express.co.uk/) and [The Telegraph](http://www.telegraph.co.uk/) with 10 upheld complaints each. And following close behind was [The Times](http://www.thetimes.co.uk/) with 8 complaints, [The Mail](http://www.dailymail.co.uk/) with 6, and the [The Sun](http://www.thesun.co.uk/sol/homepage/) and the Daily Star with 4 each. ([Plot (pdf)](figure/ipso_n_upheld.pdf) of total upheld complaints for top 20 media organizations with most upheld complaints against them.) See also [plot (pdf)](figure/ipso_p_upheld.pdf) of batting average of media organizations with most complaints against them.
 
 ```{r eval=F}
 # set dir
