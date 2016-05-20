@@ -142,7 +142,7 @@ geom_point() +
 theme_minimal(base_size=9) +
 ylab("") + 
 xlab("Proportion of Complaints Upheld for Organizations with Most Complaints") + 
-scale_x_continuous(limits=c(0, 10), breaks = c(0,5,10), labels = c("0", "5", "10")) + 
+scale_x_continuous(limits=c(0, 1), breaks = c(0,.25, .5, .75, 1.0), labels = c("0",".25", ".5", ".75", "1")) + 
 theme(panel.grid.major=element_line(color="#F0F0F0",size=.25)) +
 theme(panel.grid.minor=element_blank()) +
 theme(axis.ticks=element_blank()) +
