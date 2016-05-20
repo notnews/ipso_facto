@@ -76,7 +76,7 @@ To download the data, [click here](data/ipso_complaints.csv).
 
 ### Total Complaints Received
 
-```{r total_complaints}
+```{r, fig.width=6.5, total_complaints}
 # The plot
 library(ggplot2)
 library(scales)
@@ -105,7 +105,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_complaints.
 
 ### Total Complaints Upheld 
 
-```{r total_upheld}
+```{r, fig.width=6.5, total_upheld}
 n_upheld <- setNames(upheld_tab[order(-upheld_tab$total_upheld)[1:20],c("media_org", "total_upheld")], c("Media", "Frequency"))
 n_upheld$Media <- factor(n_upheld$Media, levels=n_upheld$Media[order(n_upheld$Frequency)], ordered=TRUE) #reordering
 
@@ -131,7 +131,7 @@ To download the pdf version of the graph, [click here](figure/ipso_n_upheld.pdf)
 
 ### Batting Average of Media Organizations with most complaints against them
 
-```{r, fig.width=5, batting_av}
+```{r, fig.width=6.5, batting_av}
 # Batting average of the top 20
 
 p_upheld    <-  setNames(upheld_tab[upheld_tab$media_org %in% media_tab2$Media, c("media_org", "prop_upheld")], c("Media", "Proportion"))
